@@ -1,0 +1,28 @@
+WEBSITE KLAMONO — Tim Ekspedisi Patriot 20 Universitas Brawijaya 2026
+=====================================================================
+
+Panduan lengkap ada di dokumen "Panduan Website Klamono" (Claude Docs).
+Ringkasnya:
+
+1. Lihat website di komputer: klik dua kali  index.html
+2. Ubah data (kontak kampung, titik peta, tim, foto):  pengaturan.js
+   Buka dengan Notepad (Windows) atau TextEdit mode teks biasa (Mac).
+   Ubah hanya teks di dalam tanda kutip '...'.
+3. Email booking otomatis: tempel  google-apps-script/Kode.gs  ke
+   Google Sheet > Ekstensi > Apps Script, jalankan "siapkan", lalu
+   Terapkan > Deployment baru > Aplikasi web (akses: Siapa saja).
+   Tempel URL-nya di pengaturan.js > urlGoogleScript.
+4. Online-kan gratis: buka app.netlify.com/drop, seret folder ini.
+5. Uji satu booking dan pastikan email konfirmasi masuk.
+
+Isi folder:
+  index.html               halaman website (jangan diubah)
+  pengaturan.js            SEMUA pengaturan yang bisa Anda ubah
+  konten/tanaman.js        34 tanaman obat (ID/EN)
+  konten/pengetahuan.js    9 bab pengetahuan lokal, kamus istilah, daftar pustaka
+  konten/artikel.js        kisah & berita (tambah tulisan di sini)
+  assets/                  tampilan, kode, dan foto
+  foto-tim/, foto-galeri/  tempat foto Anda
+  google-apps-script/      kode email otomatis untuk Google Sheet
+
+Pengetahuan lokal di website ini milik masyarakat adat Moi.

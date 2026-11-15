@@ -1,0 +1,7 @@
+# GitHub Pages: semua file disajikan apa adanya; folder di bawah ini tidak ikut tayang.
+exclude:
+  - google-apps-script
+  - BACA-SAYA.txt
+  - foto-galeri/TARUH-FOTO-GALERI-DI-SINI.txt
+  - foto-tim/TARUH-FOTO-TIM-DI-SINI.txt
+  - README.md

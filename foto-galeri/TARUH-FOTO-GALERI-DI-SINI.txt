@@ -1,0 +1,3 @@
+Taruh foto galeri di folder ini (JPG, lebar sekitar 1200 piksel, di bawah 400 KB).
+Lalu tambahkan satu baris di bagian KLM.galeri pada pengaturan.js, contoh:
+{ foto: 'foto-galeri/tokok-sagu.jpg', ket: { id: 'Warga menokok sagu di Klawana.', en: 'Residents processing sago in Klawana.' } },

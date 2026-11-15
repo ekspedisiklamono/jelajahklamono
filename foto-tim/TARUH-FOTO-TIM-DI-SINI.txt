@@ -1,0 +1,3 @@
+Taruh foto anggota tim di folder ini (JPG, persegi, sekitar 400 x 400 piksel).
+Nama file huruf kecil tanpa spasi, misalnya: wayan.jpg
+Lalu tulis jalurnya di pengaturan.js, contoh:  foto: 'foto-tim/wayan.jpg'
