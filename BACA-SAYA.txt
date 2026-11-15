@@ -12,7 +12,10 @@ Ringkasnya:
    Google Sheet > Ekstensi > Apps Script, jalankan "siapkan", lalu
    Terapkan > Deployment baru > Aplikasi web (akses: Siapa saja).
    Tempel URL-nya di pengaturan.js > urlGoogleScript.
-4. Online-kan gratis: buka app.netlify.com/drop, seret folder ini.
+4. Website tayang lewat GitHub Pages dari repository
+   github.com/ekspedisiklamono/jelajahklamono (cabang main).
+   Setiap perubahan yang dikirim ke repository itu otomatis tayang di
+   jelajahklamono.com dalam 1-2 menit.
 5. Uji satu booking dan pastikan email konfirmasi masuk.
 
 Isi folder:
