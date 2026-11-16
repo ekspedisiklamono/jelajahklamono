@@ -1597,3 +1597,7 @@ em { font-style: italic; }
   .ada-badge .kaki.berombak { margin-bottom: calc(80px + var(--badge-h, 64px) + env(safe-area-inset-bottom, 0px)); }
   .ada-badge .roti { bottom: calc(90px + var(--badge-h, 64px) + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* footer: links to the static index pages (published site only) */
+.kaki-indeks { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; font-size: .88rem; }
+.kaki-indeks span { font-weight: 700; color: var(--band-ink); margin-right: 4px; }

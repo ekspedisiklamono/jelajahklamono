@@ -145,7 +145,7 @@
       'peng.bab': 'Bab pengetahuan lokal', 'peng.kamus': 'Kamus istilah', 'peng.kamusSub': 'Istilah Moi dan istilah lokal yang muncul di pustaka, dengan tautan ke bab asalnya.', 'kamus.cari': 'Cari istilah atau artinya…', 'kamus.hitung': '{n} dari {t} istilah', 'kamus.kosong': 'Belum ada istilah yang cocok.',
       'kamus.baca': 'Baca di bab “{b}”', 'rujukan': 'Daftar pustaka', 'menitBaca': '{m} menit baca',
       'bab.wilayah': 'Wilayah', 'bab.masyarakat': 'Masyarakat', 'bab.sejarah': 'Sejarah', 'bab.adat': 'Adat', 'bab.seni': 'Seni', 'bab.wisata': 'Wisata',
-      'judul.beranda': 'Jelajah Klamono — Wisata Kampung & Pengetahuan Suku Moi di Sorong', 'bab.istilah': 'Istilah dalam bab ini', 'bab.ke': 'Bab {n} dari {t}', 'bab.nIstilah': 'Istilah: {n}', 'bab.sumberJudul': 'Sumber bab ini', 'bab.sebelum': 'Bab sebelumnya', 'bab.berikut': 'Bab berikutnya', 'buku.pendekTanaman': 'Buku saku Tanaman Obat', 'buku.pendekKlamono': 'Buku saku Sejarah Lokal', 'buku.klamono': 'Buku Saku Inventarisasi Warisan Budaya Sejarah Lokal Klamono Raya', 'buku.tanaman': 'Buku saku Tanaman Obat',
+      'judul.beranda': 'Jelajah Klamono — Wisata & Tanaman Obat Suku Moi di Sorong', 'kaki.indeks': 'Indeks halaman', 'indeks.wisata': 'Wisata Klamono', 'indeks.tanaman': '34 tanaman obat', 'indeks.pengetahuan': 'Sejarah & budaya', 'indeks.kamus': 'Kamus istilah', 'indeks.kisah': 'Kisah & berita', 'bab.istilah': 'Istilah dalam bab ini', 'bab.ke': 'Bab {n} dari {t}', 'bab.nIstilah': 'Istilah: {n}', 'bab.sumberJudul': 'Sumber bab ini', 'bab.sebelum': 'Bab sebelumnya', 'bab.berikut': 'Bab berikutnya', 'buku.pendekTanaman': 'Buku saku Tanaman Obat', 'buku.pendekKlamono': 'Buku saku Sejarah Lokal', 'buku.klamono': 'Buku Saku Inventarisasi Warisan Budaya Sejarah Lokal Klamono Raya', 'buku.tanaman': 'Buku saku Tanaman Obat',
       'kisah.sub': 'Kisah hidup warga, berita kampung, dan kabar program.',
       'kisah.kirimJ': 'Punya kisah dari Klamono?', 'kisah.kirim': 'Kirim tulisan, foto, atau rekaman kisah warga ke {email}. Kami menyuntingnya bersama penuturnya sebelum terbit.',
       'art.kisah': 'Kisah', 'art.berita': 'Berita', 'art.program': 'Program', 'oleh': 'Oleh {p}',
@@ -258,7 +258,7 @@
       'peng.bab': 'Local knowledge chapters', 'peng.kamus': 'Glossary', 'peng.kamusSub': 'Moi and local terms that appear in the library, linked to the chapters they come from.', 'kamus.cari': 'Search a term or its meaning…', 'kamus.hitung': '{n} of {t} terms', 'kamus.kosong': 'No matching terms yet.',
       'kamus.baca': 'Read in “{b}”', 'rujukan': 'References', 'menitBaca': '{m} min read',
       'bab.wilayah': 'Place', 'bab.masyarakat': 'People', 'bab.sejarah': 'History', 'bab.adat': 'Custom', 'bab.seni': 'Arts', 'bab.wisata': 'Travel',
-      'judul.beranda': 'Jelajah Klamono — Village Tourism & Moi Knowledge in Sorong, Papua', 'bab.istilah': 'Terms in this chapter', 'bab.ke': 'Chapter {n} of {t}', 'bab.nIstilah': 'Terms: {n}', 'bab.sumberJudul': 'Source of this chapter', 'bab.sebelum': 'Previous chapter', 'bab.berikut': 'Next chapter', 'buku.pendekTanaman': 'Medicinal Plants pocket book', 'buku.pendekKlamono': 'Local History pocket book', 'buku.klamono': 'Pocket book: Inventory of the Cultural Heritage and Local History of Klamono Raya', 'buku.tanaman': 'Pocket book: Medicinal Plants',
+      'judul.beranda': 'Jelajah Klamono — Village Tourism & Moi Medicinal Plants, Sorong', 'kaki.indeks': 'Page index', 'indeks.wisata': 'Things to do', 'indeks.tanaman': '34 medicinal plants', 'indeks.pengetahuan': 'History & culture', 'indeks.kamus': 'Glossary', 'indeks.kisah': 'Stories & news', 'bab.istilah': 'Terms in this chapter', 'bab.ke': 'Chapter {n} of {t}', 'bab.nIstilah': 'Terms: {n}', 'bab.sumberJudul': 'Source of this chapter', 'bab.sebelum': 'Previous chapter', 'bab.berikut': 'Next chapter', 'buku.pendekTanaman': 'Medicinal Plants pocket book', 'buku.pendekKlamono': 'Local History pocket book', 'buku.klamono': 'Pocket book: Inventory of the Cultural Heritage and Local History of Klamono Raya', 'buku.tanaman': 'Pocket book: Medicinal Plants',
       'kisah.sub': 'Residents’ life stories, village news and programme updates.',
       'kisah.kirimJ': 'Have a story from Klamono?', 'kisah.kirim': 'Send writing, photos or recordings of residents’ stories to {email}. We edit them with the storytellers before publishing.',
       'art.kisah': 'Story', 'art.berita': 'News', 'art.program': 'Programme', 'oleh': 'By {p}',
@@ -620,6 +620,7 @@
       '<li><span class="kecil">' + esc(t('kontak.tulisanJudul')) + '</span><a href="mailto:' + esc(EMAIL) + '">' + esc(EMAIL) + '</a>' +
       (namaIG(CFG.instagram) ? '<a class="ig-kecil" href="' + esc(tautanIG(namaIG(CFG.instagram))) + '" target="_blank" rel="noopener">' + IK.instagram + 'Instagram @' + esc(namaIG(CFG.instagram)) + '</a>' : '') + '</li>' +
       '<li>Distrik Klamono, Kabupaten Sorong, Papua Barat Daya</li></ul></div>' +
+      (situsAsli() ? '<nav class="kaki-indeks" aria-label="' + esc(t('kaki.indeks')) + '"><span>' + esc(t('kaki.indeks')) + '</span><a href="/wisata/">' + esc(t('indeks.wisata')) + '</a><a href="/tanaman/">' + esc(t('indeks.tanaman')) + '</a><a href="/pengetahuan/">' + esc(t('indeks.pengetahuan')) + '</a><a href="/kamus/">' + esc(t('indeks.kamus')) + '</a><a href="/kisah/">' + esc(t('indeks.kisah')) + '</a></nav>' : '') +
       '<p class="hak">' + esc(t('kaki.hak')) + '</p></div>';
     // language banner for visitors whose browser is not Indonesian (once)
     var sp = $('#spanduk');
@@ -630,6 +631,8 @@
       sp.innerHTML = '<div class="wrap"><span>' + esc(t('spanduk')) + '</span><button type="button" data-lang="' + (lang === 'id' ? 'en' : 'id') + '">' + esc(t('spandukBtn')) + '</button><button type="button" data-tutup-spanduk aria-label="' + esc(t('tutup')) + '">×</button></div>';
     }
   }
+  // the static index pages (/tanaman/ etc.) exist only on the published site, not in the Claude preview
+  function situsAsli() { return /(^|\.)jelajahklamono\.com$|^localhost$|^127\.0\.0\.1$/.test(location.hostname); }
   function logoSVG() {
     // noken knot mark: diamond mesh with a knot
     return '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1F3B26"/><path d="M5 16L16 5l11 11-11 11z" fill="none" stroke="#B6D167" stroke-width="1.6"/><path d="M10.5 10.5l11 11M21.5 10.5l-11 11" stroke="#B6D167" stroke-width="1.6"/><circle cx="16" cy="16" r="3.2" fill="#B6D167"/></svg>';

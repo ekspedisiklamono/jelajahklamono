@@ -1,5 +1,5 @@
 # Builds index.html (deployable website) and _pratinjau/index.html (Claude artifact preview)
-import os, base64
+import os, base64, re
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FAV = "data:image/svg+xml," + "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F3B26'/%3E%3Cpath d='M5 16L16 5l11 11-11 11z' fill='none' stroke='%23B6D167' stroke-width='1.6'/%3E%3Cpath d='M10.5 10.5l11 11M21.5 10.5l-11 11' stroke='%23B6D167' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='3.2' fill='%23B6D167'/%3E%3C/svg%3E"
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap">'
@@ -21,7 +21,7 @@ DESC = 'Pesan pengalaman wisata langsung dari kampung-kampung di Klamono, Sorong
 # ---- search engines (production only) ----
 import json, subprocess, datetime
 URL = 'https://jelajahklamono.com/'
-JUDUL = 'Jelajah Klamono — Wisata Kampung & Pengetahuan Suku Moi di Sorong'
+JUDUL = 'Jelajah Klamono — Wisata & Tanaman Obat Suku Moi di Sorong'
 DESC_SEO = 'Wisata kampung di Klamono, Sorong, Papua Barat Daya: trekking Hutan Klawosom, tokok sagu, tari Moi, dan pustaka 34 tanaman obat Suku Moi.'
 GAMBAR = URL + 'assets/img/foto/koba-koba-warga.jpg'
 _data = json.loads(subprocess.run(['node', '-e', 'global.window=global;window.KLM={};require(process.argv[1]+"/pengaturan.js");console.log(JSON.stringify({p:KLM.pengalaman,s:KLM.pengaturan}))', R],
@@ -80,14 +80,20 @@ NOSCRIPT = ('<noscript><div class="wrap" style="padding:48px 16px"><h1>Jelajah K
   '<p>Pustaka: 34 tanaman obat Suku Moi, sejarah lokal Klamono, kamus istilah Moi, serta dua buku saku: '
   '<a href="assets/buku/buku-saku-tanaman-obat-klamono-raya.pdf">Tanaman Obat Klamono Raya (PDF)</a> dan '
   '<a href="assets/buku/buku-saku-sejarah-lokal-klamono-raya.pdf">Sejarah Lokal Klamono Raya (PDF)</a>.</p>'
+  '<h2>Halaman</h2><ul><li><a href="wisata/">Wisata di Klamono</a></li><li><a href="tanaman/">34 tanaman obat Suku Moi</a></li>'
+  '<li><a href="pengetahuan/">Sejarah dan budaya Klamono</a></li><li><a href="kamus/">Kamus istilah Moi</a></li><li><a href="kisah/">Kisah dan berita</a></li></ul>'
   '<p>Website ini memerlukan JavaScript. / This website needs JavaScript.</p></div></noscript>')
 site = site.replace('<noscript><div class="wrap" style="padding:48px 16px"><h1>Klamono</h1><p>Website ini memerlukan JavaScript. Aktifkan JavaScript di browser Anda. / This website needs JavaScript.</p></div></noscript>', NOSCRIPT)
+import hashlib
+def _versi(m):
+    f = os.path.join(R, m.group(2))
+    return m.group(1) + m.group(2) + ('?v=' + hashlib.sha1(open(f, 'rb').read()).hexdigest()[:8] if os.path.isfile(f) else '') + m.group(3)
+site = re.sub(r'((?:src|href)=")((?:assets|konten)/[^"?]+\.(?:js|css)|pengaturan\.js)(")', _versi, site)
 open(R + '/index.html', 'w').write(site)
 hari = datetime.date.today().isoformat()
 open(R + '/robots.txt', 'w').write('User-agent: *\nAllow: /\n\nSitemap: ' + URL + 'sitemap.xml\n')
-_peta = [(URL, '1.0'), (URL + 'assets/buku/buku-saku-tanaman-obat-klamono-raya.pdf', '0.6'), (URL + 'assets/buku/buku-saku-sejarah-lokal-klamono-raya.pdf', '0.6')]
-open(R + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  ''.join(f'  <url><loc>{u}</loc><lastmod>{hari}</lastmod><priority>{p}</priority></url>\n' for u, p in _peta) + '</urlset>\n')
+# one static page per plant, chapter, experience and story, plus sitemap.xml
+subprocess.run(['python3', os.path.join(R, '_alat', 'halaman.py')], check=True)
 os.makedirs(R + '/_pratinjau', exist_ok=True)
 art = f'''<title>Klamono</title>
 <meta name="claude:viewport-fit-sides" content="cover">
